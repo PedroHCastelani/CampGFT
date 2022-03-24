@@ -12,7 +12,7 @@ public class ExerciciosDeRepeticao {
         //exercicioMaiorEMedia();
         //exercicioParEImpar();
         //exercicioTabuada();
-        exercicioFatorial();
+        //exercicioFatorial();
 
     }
 
