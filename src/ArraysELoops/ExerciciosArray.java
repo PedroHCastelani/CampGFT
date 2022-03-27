@@ -1,13 +1,17 @@
 package ArraysELoops;
 
+
+import java.util.Random;
 import java.util.Scanner;
 
 public class ExerciciosArray {
 
     public static void main(String[] args) {
 
-        //exercicioOrdemInversa();
+        exercicioOrdemInversa();
         exercicioConsoantes();
+        exercicioNumertosAleatorios();
+        exercicioMultidimensional();
 
     }
 
@@ -57,6 +61,52 @@ public class ExerciciosArray {
             System.out.println(consoante + " ");
         }
     }
+
+    public static void exercicioNumertosAleatorios() {
+        Random random = new Random();
+
+        int[] numerosAleatorios = new int[6];
+
+        for (int i = 0; i < numerosAleatorios.length; i++){
+            int numero = random.nextInt(60);
+            numerosAleatorios[i] = numero;
+        }
+
+        for (int numero : numerosAleatorios ) {
+
+            System.out.print(numero + " ");
+
+        }
+        System.out.println(" ");
+        for (int numero : numerosAleatorios ) {
+
+            System.out.print((numero + 1) + " ");
+
+        }
+
+    }
+
+    public static void exercicioMultidimensional() {
+        Random random = new Random();
+
+        int[][] M = new int[4][4];
+
+        for (int i = 0; i < M.length; i++){
+
+            for (int c = 0; c < M[i].length; c++) {
+                M[i][c] = random.nextInt(9);
+            }
+        }
+
+        for (int[] linha : M ) {
+            for (int coluna : linha) {
+                System.out.print(coluna + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
 }
 
 
